@@ -8,9 +8,9 @@ public class Main {
             return new Node(data);
         } else {
             if (data < root.data) {
-                root.Left = Insert(root.Left, data);
+                root.left = Insert(root.left, data);
             } else if (data > root.data) {
-                root.Right = Insert(root.Right, data);
+                root.right = Insert(root.right, data);
             }
             return root;
         }
@@ -24,32 +24,32 @@ public class Main {
         if (root.data == target) {
             return true;
         } else if (target < root.data) {
-            return Search(root.Left, target);
+            return Search(root.left, target);
         } else {
-            return Search(root.Right, target);
+            return Search(root.right, target);
         }
     }
 
     public static void preorder(Node root) {
         if (root != null) {
             System.out.print(root.data + " ");
-            preorder(root.Left);
-            preorder(root.Right);
+            preorder(root.left);
+            preorder(root.right);
         }
     }
 
     public static void inorder(Node root) {
         if (root != null) {
-            inorder(root.Left);
+            inorder(root.left);
             System.out.print(root.data + " ");
-            inorder(root.Right);
+            inorder(root.right);
         }
     }
 
     public static void postorder(Node root) {
         if (root != null) {
-            postorder(root.Left);
-            postorder(root.Right);
+            postorder(root.left);
+            postorder(root.right);
             System.out.print(root.data + " ");
         }
     }

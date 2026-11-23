@@ -2,13 +2,13 @@ package lw06.prelab;
 
 public class Node {
     int data;
-    Node Left;
-    Node Right;
+    Node left;
+    Node right;
 
     public Node(int data) {
         this.data = data;
-        this.Left = null;
-        this.Right = null;
+        this.left = null;
+        this.right = null;
     }
     
 }
